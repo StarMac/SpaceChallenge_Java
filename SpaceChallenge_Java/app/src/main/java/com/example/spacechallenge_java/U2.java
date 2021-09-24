@@ -1,5 +1,7 @@
 package com.example.spacechallenge_java;
 
+import java.util.Random;
+
 public class U2 extends Rocket{
 
     public U2 (){
@@ -12,17 +14,13 @@ public class U2 extends Rocket{
     }
 
     public boolean launch() {
-        int random = (int)(Math.random() * 100 + 1);
         this.chanceOfLaunchExplosion = 4.0 * (this.weightInclCargo - this.weight) / (this.maxWeight - this.weight);
-
-        return this.chanceOfLaunchExplosion <= random;
+        return this.chanceOfLaunchExplosion <= new Random().nextInt(100) + 1;
     }
 
     public boolean land() {
-        int random = (int)(Math.random() * 100 + 1);
         this.chanceOfLandingCrash = 8.0 * (this.weightInclCargo - this.weight) / (this.maxWeight - this.weight);
-
-        return this.chanceOfLandingCrash <= random;
+        return this.chanceOfLandingCrash <= new Random().nextInt(100) + 1;
     }
 }
 
