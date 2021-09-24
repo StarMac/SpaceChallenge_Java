@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txtTotalBudgetU1 = findViewById(R.id.totalCostU1);
-        txtTotalBudgetU2 = findViewById(R.id.totalCostU2);
+        txtTotalBudgetU1 = findViewById(R.id.txtTotalBudgetU1);
+        txtTotalBudgetU2 = findViewById(R.id.txtTotalBudgetU2);
         Button button = findViewById(R.id.btnRunSimulation);
         button.setOnClickListener(this);
     }
